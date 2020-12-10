@@ -16,9 +16,10 @@
 caso pegue o código do github deverá adicionar no arquivo 
 amigo-oculto/lib/src/shared/constants.dart
 o email e senha para envio dos emails via smtp nas variáveis :
-String username = 'virtualamigooculto@gmail.com';
-String password = '22b3r4u5';
-Este email foi criado exclusivamente para esse fim.
+
+O emailo e senha foram enviados por  email no arquivo readme
+
+
 
 # Desenvolvimento
 
