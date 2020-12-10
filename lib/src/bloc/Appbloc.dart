@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:math';
 
+import 'package:amigoocultovirtual/src/shared/constants.dart';
 import 'package:amigoocultovirtual/src/shared/models/participant.dart';
 import 'package:amigoocultovirtual/src/shared/models/raffle.dart';
 import 'package:bloc_provider/bloc_provider.dart';
@@ -150,8 +151,7 @@ class AppBloc extends Bloc{
   }
   Future<bool> sendEmails({bool resend = false})async{
 
-    String username = '';
-    String password = '';
+
      Raffle raffle = _raffleController.value;
      if(raffle !=null){
        raffle.combinations.forEach((element) async{
