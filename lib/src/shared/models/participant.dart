@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class Participant{
-
+class Participant {
   String name;
   String email;
   Address address;
@@ -9,17 +8,21 @@ class Participant{
   Participant friend;
   bool isModerator;
 
-  Participant({@required this.name,@required this.email, @required this.address, @required this.observation, this.isModerator=false});
+  Participant(
+      {@required this.name,
+      @required this.email,
+      @required this.address,
+      @required this.observation,
+      this.isModerator = false});
 
-
-  bool verifyEquals(Participant participant){
-
-    if(participant.name == this.name && participant.email == this.email){
+  bool verifyEquals(Participant participant) {
+    if (participant.name == this.name && participant.email == this.email) {
       return true;
     }
     return false;
   }
-  Participant.fromMap(Map map){
+
+  Participant.fromMap(Map map) {
     name = map["name"];
     email = map['email'];
     observation = map['observation'];
@@ -27,29 +30,36 @@ class Participant{
     address = Address.fromMap(map["address"]);
     isModerator = map['isModerator'];
   }
-  Map toMap(){
+
+  Map toMap() {
     return {
-      "name":this.name,
+      "name": this.name,
       "email": this.email,
       "address": this.address.toMap(),
-      "observation":this.observation,
-      "friend": this.friend!=null?this.friend.toMap():null,
-      "isModerator":this.isModerator
+      "observation": this.observation,
+      "friend": this.friend != null ? this.friend.toMap() : null,
+      "isModerator": this.isModerator
     };
-}
+  }
 }
 
-class Address{
+class Address {
   String street;
   String city;
   String number;
   String complement;
   String district;
   String postalCode;
-  Address({this.street, this.city, this.number, this.complement, this.district,
+
+  Address(
+      {this.street,
+      this.city,
+      this.number,
+      this.complement,
+      this.district,
       this.postalCode});
 
-  Address.fromMap(Map map){
+  Address.fromMap(Map map) {
     street = map['street'];
     city = map['city'];
     number = map['number'];
@@ -57,15 +67,15 @@ class Address{
     district = map['district'];
     postalCode = map['postalCode'];
   }
-  Map toMap(){
+
+  Map toMap() {
     return {
-      "street":this.street,
+      "street": this.street,
       "city": this.city,
-      "number":this.number,
-     " complement": this.complement,
+      "number": this.number,
+      " complement": this.complement,
       "district": this.district,
-      "postalCode":this.postalCode
+      "postalCode": this.postalCode
     };
   }
-
 }

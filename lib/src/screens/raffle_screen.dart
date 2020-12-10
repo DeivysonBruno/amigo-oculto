@@ -106,7 +106,7 @@ class _RaffleScreenState extends State<RaffleScreen> {
                                 goTo(context, ParticipantsListScreen());
                               },
                               child: Text(
-                                "Adicionar participantes",
+                                "Adicionar participantes +",
                                 style: TextStyle(
                                     color: AppColors.primary,
                                     decoration: TextDecoration.underline),

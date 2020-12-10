@@ -8,7 +8,7 @@ class Alert {
       builder: (BuildContext context) {
         return AlertDialog(
           shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15.0)),
+              borderRadius: BorderRadius.circular(15.0)),
           title: Text(title),
           content: Text(msg),
           actions: <Widget>[

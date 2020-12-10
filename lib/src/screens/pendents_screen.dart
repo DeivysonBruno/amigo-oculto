@@ -18,11 +18,11 @@ class _PendentsScreenState extends State<PendentsScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    BlocProvider.of<AppBloc>(context).loadRaffles();
     VerifyInternetConnection.verifyInternet().then((value) {
       hasInternet = value;
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -88,6 +88,8 @@ class _PendentsScreenState extends State<PendentsScreen> {
       }else {
         Alert.show(context, "Erro "," Houve uma falha ao processar seu pedido");
       }
+    await BlocProvider.of<AppBloc>(context).cleanRaffle();
+
 
   }
 

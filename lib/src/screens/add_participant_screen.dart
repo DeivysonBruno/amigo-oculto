@@ -15,11 +15,10 @@ class NewParticipantScreen extends StatefulWidget {
 }
 
 class _NewParticipantScreenState extends State<NewParticipantScreen> {
-
   var _nameController = TextEditingController();
   var _emailController = TextEditingController();
   var _cepController = TextEditingController();
-  var _observationController = TextEditingController(text:'');
+  var _observationController = TextEditingController(text: '');
   var _streetController = TextEditingController();
   var _numberController = TextEditingController();
   var _districtController = TextEditingController();
@@ -28,6 +27,7 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
   bool load = false;
   var _formKey = GlobalKey<FormState>();
   bool radiovalue = false;
+
   @override
   Widget build(BuildContext context) {
     return ModalProgressHUD(
@@ -43,7 +43,7 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
         ),
         body: Container(
           height: MediaQuery.of(context).size.height,
-          padding: EdgeInsets.symmetric(horizontal: 16,vertical: 20),
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
           child: SingleChildScrollView(
             child: Form(
               key: _formKey,
@@ -51,8 +51,10 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Text("Dados pessoais", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),),
-
+                  Text(
+                    "Dados pessoais",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                  ),
                   SizedBox(
                     height: 20,
                   ),
@@ -62,7 +64,8 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
                     decoration: InputDecoration(
                         labelText: "Nome",
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10)))),
                   ),
                   SizedBox(
                     height: 20,
@@ -70,18 +73,21 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
                   Row(
                     children: [
                       Text("Moderador:"),
-                      SizedBox(width: 16,),
+                      SizedBox(
+                        width: 16,
+                      ),
                       Container(
                         width: 50,
-                        child: Switch(value: radiovalue, onChanged: (value){
-                          setState(() {
-                            radiovalue = value;
-                          });
-                        }),
+                        child: Switch(
+                            value: radiovalue,
+                            onChanged: (value) {
+                              setState(() {
+                                radiovalue = value;
+                              });
+                            }),
                       )
                     ],
                   ),
-
                   SizedBox(
                     height: 20,
                   ),
@@ -92,11 +98,9 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
                     decoration: InputDecoration(
                         labelText: "Email ",
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10)))),
                   ),
-
-
-
                   SizedBox(
                     height: 20,
                   ),
@@ -105,13 +109,16 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
                     decoration: InputDecoration(
                         labelText: "Observação",
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10)))),
                   ),
-
                   SizedBox(
                     height: 20,
                   ),
-                  Text("Endereço", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),),
+                  Text(
+                    "Endereço",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                  ),
                   SizedBox(
                     height: 20,
                   ),
@@ -125,7 +132,8 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
                       decoration: InputDecoration(
                           labelText: "CEP",
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10)))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)))),
                     ),
                   ),
                   SizedBox(
@@ -142,10 +150,13 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
                           decoration: InputDecoration(
                               labelText: "Rua",
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(10)))),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10)))),
                         ),
                       ),
-                      SizedBox(width: 8,),
+                      SizedBox(
+                        width: 8,
+                      ),
                       Flexible(
                         flex: 1,
                         child: TextFormField(
@@ -155,7 +166,8 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
                           decoration: InputDecoration(
                               labelText: "N°",
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(10)))),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10)))),
                         ),
                       ),
                     ],
@@ -168,7 +180,8 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
                     decoration: InputDecoration(
                         labelText: "Complemento",
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10)))),
                   ),
                   SizedBox(
                     height: 20,
@@ -179,7 +192,8 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
                     decoration: InputDecoration(
                         labelText: "Bairro",
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10)))),
                   ),
                   SizedBox(
                     height: 20,
@@ -190,19 +204,22 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
                     decoration: InputDecoration(
                         labelText: "Cidade",
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10)))),
                   ),
-
                   SizedBox(
                     height: 40,
                   ),
-                  RaisedButton(onPressed: addParticipant,
-                  color: AppColors.primary,
+                  RaisedButton(
+                    onPressed: addParticipant,
+                    color: AppColors.primary,
                     padding: EdgeInsets.symmetric(vertical: 8, horizontal: 30),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10))
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    child: Text(
+                      "Adicionar",
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                    child: Text("Adicionar", style: TextStyle(color: Colors.white,fontSize: 18),),
                   )
                 ],
               ),
@@ -223,38 +240,37 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
         postalCode: _cepController.text,
         street: _streetController.text,
       );
-      Participant participant = Participant(name: _nameController.text,
+      Participant participant = Participant(
+          name: _nameController.text,
           email: _emailController.text,
           address: address,
           isModerator: radiovalue,
           observation: _observationController.text);
-      bool resp =BlocProvider.of<AppBloc>(context).addParticipant(participant);
+      bool resp = BlocProvider.of<AppBloc>(context).addParticipant(participant);
 
-      if(resp){
+      if (resp) {
         setState(() {
-           _nameController.clear();
-           _emailController .clear();
-           _cepController.clear();
-           _observationController.clear();
-           _streetController.clear();
-           _numberController.clear();
-           _districtController.clear();
-           _cityController.clear();
-           _complementController.clear();
-           radiovalue = false;
+          _nameController.clear();
+          _emailController.clear();
+          _cepController.clear();
+          _observationController.clear();
+          _streetController.clear();
+          _numberController.clear();
+          _districtController.clear();
+          _cityController.clear();
+          _complementController.clear();
+          radiovalue = false;
         });
         Alert.show(context, "Feito", "Este participante foi adicionado");
-      }else {
+      } else {
         Alert.show(context, "Algo deu errado",
             "Não foi possível adicionar esse participante, verifique se o nome ou email ja não esta cadastrado");
       }
     }
-
   }
 
-
-  getAddressByCep()async{
-    if(await VerifyInternetConnection.verifyInternet()){
+  getAddressByCep() async {
+    if (await VerifyInternetConnection.verifyInternet()) {
       setState(() {
         load = !load;
       });
@@ -266,6 +282,5 @@ class _NewParticipantScreenState extends State<NewParticipantScreen> {
         load = !load;
       });
     }
-
   }
 }
