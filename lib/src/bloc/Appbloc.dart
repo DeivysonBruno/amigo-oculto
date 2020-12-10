@@ -150,8 +150,8 @@ class AppBloc extends Bloc{
   }
   Future<bool> sendEmails({bool resend = false})async{
 
-    String username = 'virtualamigooculto@gmail.com';
-    String password = '22b3r4u5';
+    String username = '';
+    String password = '';
      Raffle raffle = _raffleController.value;
      if(raffle !=null){
        raffle.combinations.forEach((element) async{
