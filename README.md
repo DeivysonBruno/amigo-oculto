@@ -17,7 +17,7 @@ caso pegue o código do github deverá adicionar no arquivo
 amigo-oculto/lib/src/shared/constants.dart
 o email e senha para envio dos emails via smtp nas variáveis :
 
-O emailo e senha foram enviados por  email no arquivo readme
+O email e senha foram enviados por  email no arquivo readme
 
 
 
